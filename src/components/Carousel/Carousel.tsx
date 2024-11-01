@@ -1,13 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 
-const Carousel = ({ data, end }) => {
+const Carousel = ({ data, end }: any) => {
   const navigate = useNavigate();
   return (
     <div
       id="hero"
       className="w-full  mx-auto flex gap-[20px] flex-wrap justify-center mb-[50px]"
     >
-      {data?.data?.items.slice(0, end).map((video) => (
+      {data?.data?.items.slice(0, end).map((video: any) => (
         <div className="w-[300px] cursor-pointer" key={video.id.videoId}>
           <Link onClick={() => navigate("/video")} to={""}>
             <img
